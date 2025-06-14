@@ -1,8 +1,8 @@
 {
-  "name": "cosmic-gaze-backend",
+  "name": "nasa-api-backend",
   "version": "1.0.0",
-  "description": "Server for cosmic gaze",
-  "main": "index.js",
+  "description": "Server for NASA projects",
+  "main": "api/index.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon api/index.js",

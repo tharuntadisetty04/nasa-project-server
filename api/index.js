@@ -5,9 +5,11 @@ import cors from "cors";
 
 const app = express();
 
-dotenv.config({
-  path: ".env",
-});
+if (process.env.VERCEL_ENV !== "production") {
+  dotenv.config({
+    path: ".env",
+  });
+}
 
 app.use(
   cors({
@@ -91,3 +93,5 @@ app.get("/api/mars-rover", async (req, res) => {
 app.listen(process.env.PORT || 8000, () =>
   console.log("Server running on http://localhost:8000")
 );
+
+export default app;
